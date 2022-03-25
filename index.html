@@ -6,6 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>cab9.time-motion</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <style>
+        html,body{
+            height: 100%;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            font-family: 'Avenir Next', 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        .message_container{
+            background: aliceblue;
+            width: 100%;
+            margin: 8px;
+            text-align: center;
+            padding: 8px;
+        }
+    </style>
 </head>
 <body>
     <div id="app"></div>
@@ -13,8 +34,14 @@
 		new Vue({
 			data: () => ({ message: 'time and motion', ticks: 0 }),
 			template: `
-                <div>
-                  <h1>{{message}}</h1>
+                <div class="container">
+                   <div>
+                       <img src="./img/cab9.png" height="80px" alt="">
+                   </div>
+                   <h2>Meter</h2>
+                    <div class="message_container">
+                        <div>{{message}}</div>
+                    </div>
                 </div>
             `,
             methods: {
