@@ -46,9 +46,7 @@
             `,
             methods: {
                 postMessageHandler(event) {
-					if(event.data && event.data.type === 'meter_data'){
-						this.message = event.data.message;
-                    }
+					this.message = event.data;
                 }
             },
             mounted() {
