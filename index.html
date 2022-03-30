@@ -48,9 +48,10 @@
             methods: {
                 postMessageHandler(event) {
 					const messageEventData = event.data;
-					if(messageEventData.type === 'geoLocation'){
-						this.message = messageEventData;
-                    }
+					this.message = messageEventData;
+					// if(messageEventData.type === 'geoLocation'){
+					// 	this.message = messageEventData;
+                    // }
                 },
 				callBackHandler(message){
 					console.log(message);
