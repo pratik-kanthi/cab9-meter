@@ -21,10 +21,10 @@
 
         .message_container{
             background: aliceblue;
-            width: 100%;
-            margin: 8px;
+            margin: 24px 0px;
             text-align: center;
-            padding: 8px;
+            padding: 18px;
+            border: 1px solid gray;
         }
     </style>
 </head>
@@ -40,7 +40,9 @@
                    </div>
                    <h2>Meter</h2>
                     <div class="message_container">
-                        <div>{{message}}</div>
+                        <div>
+                            <pre>{{message}}</pre>
+                        </div>
                     </div>
                 </div>
             `,
