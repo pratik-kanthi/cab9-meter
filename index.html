@@ -47,11 +47,9 @@
                 </div>
             `,
             methods: {
-                postMessageHandler(message) {
-					console.log(message);
-					message = JSON.parse(message);
-					if(message.type === 'geoLocation'){
-						this.message = message.data;
+                postMessageHandler(event) {
+					if(event.data.type === 'geoLocation'){
+						this.message = event.data.data;
                     }
 
                 },
