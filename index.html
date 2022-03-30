@@ -49,7 +49,7 @@
                 postMessageHandler(event) {
 					const messageEventData = event.data;
 					if(messageEventData.type === 'geoLocation'){
-						this.message = messageEventData.data;
+						this.message = messageEventData;
                     }
                 },
 				callBackHandler(message){
