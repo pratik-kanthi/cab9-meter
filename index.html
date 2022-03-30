@@ -46,11 +46,11 @@
             `,
             methods: {
                 postMessageHandler(event) {
-					this.message = event.data;
+					this.message = 'Success';
                 }
             },
             mounted() {
-                window.addEventListener('message', this.postMessageHandler);
+                window.handlePostMessage = this.postMessageHandler;
             }
 		}).$mount('#app');
     </script>
