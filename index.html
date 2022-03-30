@@ -47,7 +47,7 @@
             `,
             methods: {
                 postMessageHandler(event) {
-					this.message = event;
+					this.message = JSON.stringify(event.data);
 					// if(event.type === 'geoLocation'){
 					// 	this.message = event.data;
                     // }
