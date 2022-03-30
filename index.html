@@ -47,8 +47,8 @@
             `,
             methods: {
                 postMessageHandler(event) {
-					if(event.data.type === 'geoLocation'){
-						this.message = event.data.data;
+					if(event.type === 'geoLocation'){
+						this.message = event.data;
                     }
 
                 },
