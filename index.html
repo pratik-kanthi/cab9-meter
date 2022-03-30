@@ -47,10 +47,12 @@
             `,
             methods: {
                 postMessageHandler(event) {
-					this.message = JSON.parse(event.data);
+					const _messageData = JSON.parse(event.data);
+					if(_messageData.type === 'geoLocation'){
+                        this.message = _messageData.data;
+                    }
                 },
 				callBackHandler(message){
-					console.log(message);
 					message = JSON.parse(message);
 					if(message.type === 'geoLocation'){
 						this.message = message.data;
