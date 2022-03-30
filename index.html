@@ -45,12 +45,23 @@
                 </div>
             `,
             methods: {
-                postMessageHandler(data) {
-					this.message = data;
+                postMessageHandler(message) {
+					message = JSON.parse(message);
+					if(message.type === 'geoLocation'){
+						this.message = message.data;
+                    }
+
+                },
+				callBackHandler(message){
+					message = JSON.parse(message);
+					if(message.type === 'geoLocation'){
+						this.message = message.data;
+					}
                 }
             },
             mounted() {
-                window.handlePostMessage = this.postMessageHandler;
+                window.addEventListener('message', this.postMessageHandler);
+				window.callBackHandler = this.callBackHandler;
             }
 		}).$mount('#app');
     </script>
