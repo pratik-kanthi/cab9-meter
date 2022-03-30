@@ -47,7 +47,7 @@
             `,
             methods: {
                 postMessageHandler(event) {
-					this.message = event.data;
+					this.message = typeof event.data;
                 },
 				callBackHandler(message){
 					console.log(message);
