@@ -47,7 +47,7 @@
             `,
             methods: {
                 postMessageHandler(event) {
-					this.message = typeof event.data;
+					this.message = JSON.parse(event.data);
                 },
 				callBackHandler(message){
 					console.log(message);
