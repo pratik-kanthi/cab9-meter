@@ -40,18 +40,17 @@
                    <h2>Meter</h2>
                     <div class="message_container">
                         <div>
-                            <pre>{{message}}</pre>
+                            {{message}}
                         </div>
                     </div>
                 </div>
             `,
             methods: {
                 postMessageHandler(event) {
-					this.message = event.data;
-					// if(event.type === 'geoLocation'){
-					// 	this.message = event.data;
-                    // }
-
+					const messageEventData = event.data;
+					if(messageEventData.type === 'geoLocation'){
+						this.message = messageEventData.data;
+                    }
                 },
 				callBackHandler(message){
 					console.log(message);
